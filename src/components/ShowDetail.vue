@@ -4,6 +4,9 @@
 
     <nav>
         <router-link to="/">Home</router-link>
+        <router-link v-for="episode in $store.state.data.episodes" :to="`${ $route.path }/${ episode.replace('.mp4', '') }`">
+            {{ episode.replace('.mp4', '') }}
+        </router-link>
     </nav>
 
 </main>
